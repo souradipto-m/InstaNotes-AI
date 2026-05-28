@@ -1,44 +1,57 @@
 # InstaNotes-AI 🧠✨
 
-AI-powered study notes generator that converts any topic into structured, easy-to-understand notes with concept maps, mind maps, summaries, and downloadable PDFs.
+InstaNotes-AI is an AI-powered study notes generator that creates smart, exam-ready notes instantly using FastAPI and OpenRouter AI.
+
+Generate:
+- 📚 Detailed Notes
+- 📝 Quick Revision Notes
+- 🎯 Exam-Oriented Notes
+- 🌳 Mind Maps
+- 🧩 Practice Problems & Solutions
+
+All inside a beautiful modern interface.
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
-- 📚 Generate detailed AI study notes instantly
-- 🧠 Automatic Concept Map generation
-- 🌳 Mind Map visualization
-- 📝 Clean and structured formatting
-- 📄 Export notes as PDF
-- ⚡ Fast Flask backend API
-- 🎨 Simple and responsive frontend
-- 🔒 Secure API handling with environment variables
-- 🌐 CORS enabled for frontend integration
+- ✨ AI-generated study notes
+- 📖 Markdown-rendered responses
+- 🌳 Visual text-based mind maps
+- 🎯 Exam-oriented preparation
+- 🧩 Practice problems with solutions
+- 💻 Syntax highlighted code blocks
+- 📄 Download notes as DOC file
+- ⚡ FastAPI backend
+- 🌐 OpenRouter AI integration
+- 🎨 Responsive modern UI
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 - HTML
 - CSS
 - JavaScript
+- Marked.js
+- Highlight.js
 
-### Backend
+## Backend
 - Python
-- Flask
-- OpenAI API
+- FastAPI
+- OpenRouter API
+- Uvicorn
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```bash
 InstaNotes-AI/
 │
 ├── backend/
-│   ├── app.py
+│   ├── main.py
 │   ├── requirements.txt
 │   └── .env
 │
@@ -48,91 +61,148 @@ InstaNotes-AI/
 │   └── style.css
 │
 └── README.md
+```
 
-⚙️ Installation
-1️⃣ Clone the repository
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/souradipto-m/InstaNotes-AI.git
 cd InstaNotes-AI
-2️⃣ Setup Backend
+```
 
-Create virtual environment:
+---
 
+## 2️⃣ Create Virtual Environment
+
+```bash
 python -m venv venv
+```
 
-Activate virtual environment:
+### Windows
 
-Windows
+```bash
 venv\Scripts\activate
-Mac/Linux
+```
+
+### Mac/Linux
+
+```bash
 source venv/bin/activate
+```
 
-Install dependencies:
+---
 
+## 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-3️⃣ Add Environment Variables
+```
 
-Create a .env file inside backend folder:
+---
 
-OPENAI_API_KEY=your_api_key_here
-4️⃣ Run Flask Server
-python app.py
+# 🔑 Environment Variables
 
-Server will start on:
+Create a `.env` file inside the backend folder:
 
-http://127.0.0.1:5000
-5️⃣ Run Frontend
+```env
+OPENROUTER_API_KEY=your_api_key_here
+```
 
-Simply open:
+---
 
-frontend/index.html
+# ▶️ Run Backend Server
 
-or use VS Code Live Server.
+```bash
+uvicorn main:app --reload
+```
 
-📸 Preview
-📝 Notes Generation
-AI-generated detailed study notes
-Structured explanations
-Easy revision format
-🌳 Mind Maps
-Visual topic hierarchy
-Better understanding & memory retention
-🧠 Concept Maps
-Relationship-based learning visualization
-🔮 Future Improvements
-Authentication system
-Save notes history
-Multiple export formats
-Voice-to-notes generation
-Dark mode
-AI quiz generation
-Multi-language support
-🤝 Contributing
+Server runs on:
+
+```bash
+http://127.0.0.1:8000
+```
+
+---
+
+# 💡 Available Note Types
+
+- Short (Quick Revision)
+- Detailed (In-Depth)
+- Exam-Oriented (Key Points + MCQs)
+- Mind Map
+- Practice Problems & Solutions
+
+---
+
+# 📸 UI Features
+
+## 📚 AI Notes Generation
+Generate clean and structured notes instantly.
+
+## 🌳 Mind Maps
+Tree-style visual learning for better memorization.
+
+## 🎯 Exam Preparation
+Includes important questions, MCQs, and revision points.
+
+## 🧩 Practice Problems
+Step-by-step problem solving and explanations.
+
+## 📄 DOC Export
+Download generated notes directly as DOC files.
+
+---
+
+# 🔮 Future Improvements
+
+- PDF Export
+- Authentication System
+- Cloud Storage
+- Notes History
+- Dark/Light Theme Toggle
+- AI Quiz Generator
+- Concept Maps
+- Multi-language Support
+
+---
+
+# 🤝 Contributing
 
 Contributions are welcome!
 
-Fork the repository
-Create a new branch
+```bash
 git checkout -b feature-name
-Commit your changes
-git commit -m "Added new feature"
-Push to your branch
+git commit -m "Added feature"
 git push origin feature-name
-Open a Pull Request
-📜 License
+```
 
-This project is licensed under the MIT License.
+Then open a Pull Request.
 
-👨‍💻 Author
+---
+
+# 👨‍💻 Author
 
 Created by Souradipto Majumdar
 
-⭐ Support
+GitHub:
+https://github.com/souradipto-m
+
+---
+
+# ⭐ Support
 
 If you liked this project:
 
-⭐ Star the repository
-🍴 Fork the project
-🛠️ Contribute to improve it
-🔗 Repository
+- ⭐ Star the repository
+- 🍴 Fork the project
+- 🛠️ Contribute
 
-https://github.com/souradipto-m/InstaNotes-AI
+---
+
+# 📜 License
+
+MIT License
