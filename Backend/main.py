@@ -3,11 +3,13 @@
 
 
 import os
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from openai import OpenAI
 
+load_dotenv()
 api_key = os.getenv("OPENROUTER_API_KEY")
 
 if not api_key:
