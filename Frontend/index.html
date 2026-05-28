@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>StudyNotes AI</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+  />
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+      <h1>📚 InstaNotes AI</h1>
+
+      <p>
+        Generate smart, exam-ready notes on any topic — instantly.
+      </p>
+
+    </div>
+
+    <!-- MAIN GRID -->
+
+    <div class="main-grid">
+
+      <!-- LEFT PANEL -->
+
+      <div class="form-card">
+
+        <h2>📝 Generate Notes</h2>
+
+        <label>Topic</label>
+
+        <input
+          type="text"
+          id="topic"
+          placeholder="e.g. Photosynthesis, DBMS, French Revolution..."
+        />
+
+        <label>Education Level (Optional)</label>
+
+        <input
+          type="text"
+          id="level"
+          placeholder="e.g. High School, B.Tech, UPSC"
+        />
+
+        <label>Class / Semester (Optional)</label>
+
+        <input
+          type="text"
+          id="semester"
+          placeholder="e.g. Semester 3"
+        />
+
+        <label>Notes Type</label>
+
+        <select id="notesType">
+
+          <option>Short (Quick Revision)</option>
+
+          <option>Detailed (In-Depth)</option>
+
+          <option>Exam-Oriented (Key Points + MCQs)</option>
+
+          <option>Mind Map</option>
+
+          <option>Practice Problems & Solutions</option>
+        </select>
+
+        <button onclick="generateNotes()">
+          ✨ Generate Notes
+        </button>
+
+      </div>
+
+      <!-- RIGHT PANEL -->
+
+      <div class="notes-card">
+
+        <div class="notes-top">
+
+          <h2>📖 Generated Notes</h2>
+
+          <button
+            id="downloadBtn"
+            onclick="downloadDOC()"
+          >
+            ⬇ Download DOC
+          </button>
+
+        </div>
+
+        <div id="notesOutput">
+
+          <div class="placeholder">
+
+            Your generated notes will appear here...
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MARKDOWN -->
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- HIGHLIGHT -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

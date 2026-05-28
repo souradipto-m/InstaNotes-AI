@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f1117;
+  color: #e8e3d8;
+  font-family: 'Source Sans 3', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 70px 20px 40px;
+  border-bottom: 1px solid #2a2a3a;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  color: #f0c060;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  color: #8a8a9a;
+  font-size: 18px;
+}
+
+/* GRID */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* CARDS */
+
+.form-card,
+.notes-card {
+  background: #16181f;
+  border: 1px solid #2a2a3a;
+  border-radius: 22px;
+  padding: 30px;
+}
+
+.form-card h2,
+.notes-card h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 25px;
+  color: #f0c060;
+}
+
+/* LABELS */
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b0aaa0;
+  font-weight: 700;
+}
+
+/* INPUTS */
+
+input,
+select {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  border: 1px solid #333350;
+  background: #1e2030;
+  color: #e8e3d8;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #f0c060;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+/* BUTTON */
+
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #f0c060;
+  color: #0f1117;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* NOTES TOP */
+
+.notes-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+#downloadBtn {
+  width: auto;
+  padding: 12px 18px;
+  background: #00b26b;
+  color: white;
+  font-size: 15px;
+}
+
+/* OUTPUT */
+
+#notesOutput {
+  background: #12141a;
+  border-left: 4px solid #f0c060;
+  border-radius: 0 14px 14px 0;
+  padding: 30px;
+  min-height: 500px;
+  line-height: 1.9;
+  overflow-x: auto;
+}
+
+/* PLACEHOLDER */
+
+.placeholder {
+  color: #777;
+}
+
+/* HEADINGS */
+
+#notesOutput h1,
+#notesOutput h2,
+#notesOutput h3 {
+  margin-top: 28px;
+  margin-bottom: 14px;
+  color: #f0c060;
+  font-family: 'Playfair Display', serif;
+}
+
+#notesOutput p {
+  margin-bottom: 16px;
+}
+
+#notesOutput ul,
+#notesOutput ol {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+#notesOutput li {
+  margin-bottom: 8px;
+}
+
+/* TABLES */
+
+#notesOutput table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+
+#notesOutput th,
+#notesOutput td {
+  border: 1px solid #333;
+  padding: 14px;
+  text-align: left;
+}
+
+#notesOutput th {
+  background: #1d2230;
+  color: #f0c060;
+}
+
+/* INLINE CODE */
+
+#notesOutput code {
+  background: #1d2230;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* CODE BLOCK */
+
+#notesOutput pre {
+  background: #111827;
+  color: #f8fafc;
+  padding: 22px;
+  border-radius: 14px;
+  overflow-x: auto;
+  margin: 24px 0;
+}
+
+#notesOutput pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* LOADER */
+
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f0c060;
+  font-size: 18px;
+}
+
+.loader::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 2px solid #f0c060;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .notes-top {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  #downloadBtn {
+    width: 100%;
+  }
+
+}
